@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Karyawan</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form action="create" method="post" class="form" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" name="name" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Instansion Name</label>
+                    <input type="text" name="namaInstansi" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Jaminan</label>
+                    <input type="text" name="jaminan" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Keperluan</label>
+                    <input type="text" name="keperluan" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <!-- dibikin dropdown -->
+                    <label for="" class="form-label">Karyawan</label>
+                    <input type="text" name="karyawan" id="" class="form-control" list="karyawanList">
+                    <datalist id="karyawanList">
+                        {% for karyawan in karyawan %}
+                        <option value="{{ karyawan.name }}">
+                            {% endfor %}
+                    </datalist>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Jumlah Tamu</label>
+                    <input type="number" name="jumlahTamu" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Foto</label>
+                    <input type="file" name="foto" class="form-control">
+                </div>
+                <button class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
