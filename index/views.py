@@ -12,16 +12,6 @@ def Index(request):
 def Create(request):
     tamu = Tamu()
     if request.method=="POST":
-        # name=request.get['name']
-        # namaIntansi=request.get['namaInstansi']
-        # jaminan=request.get['jaminan']
-        # keperluan=request.get['keperluan']
-        # karyawan=request.get['karyawan']
-        # jumlahTamu=request.get['jumlahTamu']
-        # foto=request.FILES.get['foto']
-        # obj=Tamu.objects.create(name=name, namaIntansi=namaIntansi, jaminan=jaminan, keperluan=keperluan, karyawan=karyawan, jumlahTamu=jumlahTamu, foto=foto)
-        # obj.save()
-
         tamu.name=request.POST.get('name')
         tamu.namaIntansi=request.POST.get('namaInstansi')
         tamu.jaminan=request.POST.get('jaminan')
