@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+
+            <form action="create" method="post" class="form">
+                <center>
+                    <h4 class="mt-4 mb-3">FORUM MOTOR</h4>
+                </center>
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nama</label>
+                    <input type="text" name="name" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Merk</label>
+                    <input type="text" name="merk" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Plat</label>
+                    <input type="number" name="plat" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Telpon</label>
+                    <input type="number" name="telp" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">email</label>
+                    <input type="email" name="email" id="" class="form-control">
+                </div>
+                <button class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
