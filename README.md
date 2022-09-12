@@ -1,1 +1,1 @@
-Guest Book Company
+Guest Book Company using django framework
